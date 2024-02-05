@@ -1,6 +1,6 @@
 const exerciseTypes = `#graphql
 
-# Typ reprezentujący ćwiczenie
+# Typ reprezentujący ćwiczenie / A type representing an exercise
 type Exercise {
   id: ID!
   name: String!
@@ -16,7 +16,7 @@ type Exercise {
   caloriesBurned: Int
 }
 
-# Typ wejściowy do filtrowania ćwiczeń
+# Typ wejściowy do filtrowania ćwiczeń / Input type for filtering exercises
 input ExerciseFilter {
   ids: [ID!]
   difficultyLevel: String
@@ -30,13 +30,13 @@ input ExerciseFilter {
   maxCaloriesBurned: Int
 }
 
-# Typ wejściowy zawierający filtry oraz limit dla ćwiczeń
+# Typ wejściowy zawierający filtry oraz limit dla ćwiczeń / Input type containing filters and limit for exercises
 input ExerciseFiltersInput {
   filter: ExerciseFilter
   limit: Int
 }
 
-# Typ wejściowy dla tworzenia i aktualizacji ćwiczeń
+# Typ wejściowy dla tworzenia i aktualizacji ćwiczeń / Input type for creating and updating exercises
 input ExerciseInput {
   name: String!
   description: String!
@@ -51,13 +51,13 @@ input ExerciseInput {
   caloriesBurned: Int
 }
 
-# Zapytania
+# Zapytania / Queries
 type Query {
   getExercise(id: ID!): Exercise
   getExercises(input: ExerciseFiltersInput): [Exercise]!
 }
 
-# Mutacje
+# Mutacje / Mutations
 type Mutation {
   createExercise(exerciseInput: ExerciseInput): Exercise!
   updateExercise(id: ID!, exerciseInput: ExerciseInput): Exercise!
