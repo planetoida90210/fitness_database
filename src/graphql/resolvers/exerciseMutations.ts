@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import Exercise from '../../../models/exercise';
+import Exercise from '../../../models/exercise.js';
 
 export const exerciseMutations = {
   // Stworzenie nowego ćwiczenia / Create a new exercise
